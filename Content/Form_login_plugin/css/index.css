@@ -1,0 +1,295 @@
+.menunavigate {
+    font-size: 90px;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #000;
+    color: #fff;
+}
+
+.container-form {
+    display: none;
+    background-color: #fff;
+    height: 20px;
+    position: absolute;
+    z-index: 1001;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* ============================================ */
+.wrapper {
+    position: absolute;
+    z-index: 1005;
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    left: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 630px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+/*================================= Login ===================*/
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.active1 .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.active2 .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+/*==================== register =================================== */
+.wrapper .form-box.register {
+    padding: 0 40px;
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active1 .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(400px);
+}
+
+.wrapper.active2 .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(400px);
+}
+
+/*============================= forgot =====================*/
+.wrapper .form-box.forgot {
+    padding: 0 40px;
+    position: absolute;
+    transition: none;
+    transform: translateX(800px);
+}
+
+.wrapper.active .form-box.forgot {
+    transition: transform .18s ease;
+    transform: translateX(400px);
+}
+
+.wrapper.active1 .form-box.forgot {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active2 .form-box.forgot {
+    transition: transform .18s ease;
+    transform: translateX(800px);
+}
+
+/* ====================reset ========================*/
+.wrapper .form-box.reset {
+    padding: 0 40px;
+    position: absolute;
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.active .form-box.reset {
+    transition: transform .18s ease;
+    transform: translateX(-800px);
+}
+
+.wrapper.active1 .form-box.reset {
+    transition: transform .18s ease;
+    transform: translateX(-800px);
+}
+
+.wrapper.active2 .form-box.reset {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+/* =============================================== */
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162931;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162931;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162931;
+    margin: 20px 0;
+}
+
+/* .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162931;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+} */
+
+/* .input-box input:focus~label,
+.input-box input:valid {
+    top: -5px;
+} */
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    outline-color: black;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162931;
+    line-height: 57px;
+}
+
+.remember-forget {
+    font-size: .9em;
+    color: #162931;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input {
+    accent-color: #162931;
+    margin-right: 3px;
+}
+
+.remember-forget a {
+    color: #162931;
+    text-decoration: none;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.btnS {
+    width: 100%;
+    height: 45px;
+    background: #162931;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 800;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #162931;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162931;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* input.trans:focus {
+    background-color: transparent !important;
+} */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, .9) inset;
+    /* Change the color to your own background color */
+    -webkit-text-fill-color: #000;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.9) inset;
+    /*your box-shadow*/
+    -webkit-text-fill-color: #000;
+}
