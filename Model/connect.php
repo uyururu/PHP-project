@@ -7,9 +7,9 @@ class connect
     function __construct()
     {
 
-        $dsn = 'mysql:host=localhost;dbname=data_hyte';
-        $user = 'root';
-        $pass = 123456789; // Nếu xài mammp $pass = 'root'
+        $dsn = '';
+        $user = '';
+        $pass = ''; // Nếu xài mammp $pass = 'root'
         // tạo đối tượng từ class PDO
         try {
             $this->db = new PDO($dsn, $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => " SET NAMES utf8"));
